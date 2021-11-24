@@ -1,5 +1,12 @@
-#header1{
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@553;601&display=swap');
+
+h1{
   margin: 50px;
+  font-family: "Dancing Script", cursive;
+  font-size:xx-large;
+  margin: 20px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .input1{
@@ -7,7 +14,6 @@
 }
 img{
   opacity: 0.99;
-  /* margin: 8px 8px 8px 8px; */
 }
 .center{
   height: 100%;
@@ -16,11 +22,8 @@ img{
   background-repeat: no-repeat;
   background-size: cover;
 }
-h1{
-  margin: 20px;
-  text-align: center;
-  text-transform: uppercase;
-}
+
+
 
 .button1{
   margin: 20px 10px 5px;

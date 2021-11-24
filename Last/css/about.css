@@ -20,7 +20,7 @@ body{
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  display: block;
+  /*display: block;*/
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -72,6 +72,7 @@ body{
 }
 
 .text{
+
   font-family: "Open Sans";
   font-size: 13px;
   line-height: 30px;
@@ -109,4 +110,5 @@ body{
   display: block;
   align-items: center;
   text-align: center;
+  margin: auto;
 }
