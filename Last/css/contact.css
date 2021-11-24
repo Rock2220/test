@@ -1,7 +1,7 @@
 
 body{
   text-align: center;
-  background-color: #231f20;
+  background-color: #cec6c8;
 }
 
 /* Add a black background color to the top navigation */
@@ -23,7 +23,7 @@ body{
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: rgb(185, 160, 160);
   color: black;
 }
 
@@ -47,7 +47,7 @@ form{
   padding: 20px;
   background-color: white;
   box-shadow: 2px aqua;
-  border: solid 2px rgb(223, 223, 185);
+  border: solid 2px rgb(238, 238, 209);
   border-radius: 10px;
   font-family: "humanist_521regular",Helvetica,Arial,sans-serif;
 }
