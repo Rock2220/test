@@ -323,7 +323,7 @@
 // }
 ////////////////////////////////////////////////////////////////////
 
-var myArr = [[1,2], [3,4], [5,6,7]];
+/* var myArr = [[1,2], [3,4], [5,6,7]];
 var product = 1;
 for(var i = 0; i < myArr.length; i++){
     for (var k = 0; k < myArr[i].length; k++){
@@ -331,5 +331,50 @@ for(var i = 0; i < myArr.length; i++){
     }
 }
 
-console.log(product); // 5040
+console.log(product); // 5040 */
 
+/////////////////////////////////////////////////////////////////////
+/* Do While Loop */
+/* var myArr = [];
+var i = 10;
+
+do{
+  myArr.push(i);
+  i++;
+} while(i<5)
+
+console.log(myArr); */
+/////////////////////////////////////////////////////////////////////
+
+// Generating Random Fraction
+/*
+function RandomFraction(){
+  return Math.random();
+}
+
+console.log(RandomFraction()); */
+// Returns a Decimal Random Number between 0 and 1 but not including 1
+
+
+// Returns a Random Number between 0 and 20 but not including 20
+// console.log(Math.floor(Math.random() * 20));
+
+// Returns a Random Number between 0 and 20 but not including 10
+// console.log(Math.floor(Math.random() * 10));
+
+/////////////////////////////////////////////////////////////////////
+
+// Converting String to Integer
+/* console.log(parseInt("999"));
+console.log(typeof(parseInt("999")));
+*/
+
+/* console.log(parseInt("110010", 2)); // Output = 50
+
+console.log(parseInt("110010", 3)); // Output = 327
+
+console.log(parseInt("110010", 8)); // Output = 36872
+
+console.log(parseInt("110010", 9)); // Output = 65619
+
+console.log(parseInt("110010", 10)); // Output = 110010 */
