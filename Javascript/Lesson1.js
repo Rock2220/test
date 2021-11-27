@@ -1,3 +1,5 @@
+"use strict";
+
 // function wordblanks(myNoun, myAdjective, myVerb, myAdverb){
 //   var result = "";
 //   result+= "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb + ".";
@@ -378,3 +380,37 @@ console.log(parseInt("110010", 8)); // Output = 36872
 console.log(parseInt("110010", 9)); // Output = 65619
 
 console.log(parseInt("110010", 10)); // Output = 110010 */
+
+/////////////////////////////////////////////////////////////////////
+
+// Using the Ternary Operator
+
+/* function CheckEqual(x, y){
+  if (x === y){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+console.log(CheckEqual(1, 8));
+
+function CheckEqualTernary(x, y){
+  return x === y ? true: false;
+}
+
+console.log(CheckEqualTernary(1, 8)); */
+
+/////////////////////////////////////////////////////////////////////
+// Multiple Ternary conditions
+
+/* function checkSign(num){
+  return num > 0 ? "Positive" : num < 0 ? "Negative" : "Zero";
+}
+
+console.log(checkSign(10)); // Positive
+console.log(checkSign(-20)); // Negative
+console.log(checkSign(0)); // Zero */
+
+/////////////////////////////////////////////////////////////////////
