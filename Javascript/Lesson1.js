@@ -414,3 +414,13 @@ console.log(checkSign(-20)); // Negative
 console.log(checkSign(0)); // Zero */
 
 /////////////////////////////////////////////////////////////////////
+
+// const is read-only
+
+const myarray = [2,3,5];
+
+myarray[0] = 5;
+myarray[1] = 2;
+myarray[2] = 3;
+
+console.log(myarray);
