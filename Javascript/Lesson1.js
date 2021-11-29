@@ -415,12 +415,191 @@ console.log(checkSign(0)); // Zero */
 
 /////////////////////////////////////////////////////////////////////
 
-// const is read-only
+// const is read-only (Cannot be mutated)
 
-const myarray = [2,3,5];
+/* const myarray = [2,3,5];
 
 myarray[0] = 5;
 myarray[1] = 2;
 myarray[2] = 3;
 
-console.log(myarray);
+console.log(myarray); */
+/////////////////////////////////////////////////////////////
+
+
+// Arrow Functions with Parameters
+/* var test = (array1, array2) => array1.concat(array2);
+
+console.log(test(['x', 'y', 'z'], ['a', 'b', 'c'])); */
+
+/////////////////////////////////////////////////////////////
+
+// Higher Order Arrow Functions
+
+/* const increment = (function(){
+  return function increment(number, value = 1){
+    return number + value;
+  };
+})();
+
+console.log(increment(5,2));
+console.log(increment(5));
+ */
+//////////////////////////////////////////////
+
+// Rest  operator
+
+/* const sum = (function() {
+  return function sum(a, b, c) {
+    const args = [a, b, c];
+    return args.reduce((a,b) => a + b, 0);
+  };
+})();
+console.log(sum(10, 50, 30)); // 90
+ */
+
+// Same Result
+/* const sum = (function() {
+  return function sum(...args) {
+    return args.reduce((a,b) => a + b, 0);
+  };
+})();
+console.log(sum(10, 50, 30)); // 90 */
+
+///////////////////////////////////////////////////////////////////////////
+
+// Before using the Spread Operator
+/* const x = ["RMA", "MLN", "TOT", "SOU", "MNU"];
+
+let arr2;
+
+(function(){
+  arr2 = x;
+  x[0] = "Test";
+})();
+
+console.log(arr2); // ["Test", "MLN", "TOT", "SOU", "MNU"]; */
+
+// After the spread operator
+/* const x = ["RMA", "MLN", "TOT", "SOU", "MNU"];
+
+let arr2;
+
+(function(){
+  arr2 = [...x];
+  x[0] = "Test";
+})();
+
+console.log(arr2); // ["RMA", "MLN", "TOT", "SOU", "MNU"]; */
+///////////////////////////////////////////////////////////////////////////
+/*
+// Destructuring
+const AVG_TEMP = {
+  today: 55,
+  tomorrow: 32
+};
+
+function getTempofTomorrow(avgTemperatures){
+  "use strict"
+
+  const {tomorrow: tempOfTomorrow} = avgTemperatures;
+
+  return avgTemperatures;
+}
+
+console.log(getTempofTomorrow(AVG_TEMP));
+
+ */
+
+/*Sam3eyat W Basareyat
+Visualize VORT EQ DVA Test System 2000 - Balance quest
+Any Version 3la windows 7 - 8041
+
+CANON F166400 DRIVER
+ */
+
+// Destructuring from nested objects
+/*
+const LOCAL_FORECAST = {
+  today: {min: 55, max: 75},
+  tomorrow: {min: 32, max:56}
+};
+
+function getMaxfTomorrow(forecast){
+  "use strict"
+
+  const {tomorrow: {max: maxOfTomorrow}} = forecast;
+
+  return maxOfTomorrow;
+}
+console.log(getMaxfTomorrow(LOCAL_FORECAST));
+ */
+///////////////////////////////////////////////////////////////////////////
+
+/* const source = [ 6, 9, 4, 1, 0];
+
+function removeElements(list){
+  const [, , ...arr] = list;
+  return arr;
+}
+
+const arr = removeElements(source); // [ 4, 1, 0 ]
+
+console.log(arr);     // [ 4, 1, 0 ]
+
+console.log(source); // [ 6, 9, 4, 1, 0 ] */
+///////////////////////////////////////////////////////////////////////////
+
+/* Use Destructuring Assignment to Pass an Object as a Function's Parameters */
+/*
+const statistics = {
+  max: 50,
+  min: 22,
+  today: 55,
+  tomorrow: 32
+};
+
+const half = (function(){
+  return function half({max, min}){
+    return (max, min) / 50
+  };
+}) ();
+
+console.log(statistics);
+console.log(half(statistics));
+ */
+
+///////////////////////////////////////////////////////////////////////////
+
+// Create Strings using Template Literals
+/*
+
+const car = {
+  name: "Aston Martin",
+  Year: 1990
+};
+
+const text = `${car.name} is the
+best car ever!`
+
+console.log(text); */
+///////////////////////////////////////////////////////////////////////////
+/*
+const createPerson = (name, age, gender) => {
+   return {
+     name: name,
+     age: age,
+     gender: gender
+    };
+ };
+
+console.log(createPerson("Sergio", 35, "Male")); */
+
+// Same result
+/* const createPerson = (name, age, gender) => ({name, age, gender});
+
+console.log(createPerson("Sergio", 35, "Male")); */
+
+
+// Write Consice Declarative Functions
+// Some text
