@@ -1,1 +1,9 @@
 https://www.educative.io/edpresso/what-is-use-strict-in-javascript
+
+Loosely vs Strongly Typed Languages
+https://flaviocopes.com/loosely-strongly-typed/
+
+
+
+HTML PROJECT
+https://www.youtube.com/watch?v=k4gzE80FKb0

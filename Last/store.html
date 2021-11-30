@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/store.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Newcastle United Store</title>
+</head>
+<body>
+    <div class="topnav" id="mytopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="store.html">Store</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        <a href="https://en.wikipedia.org/wiki/Newcastle_upon_Tyne">Wikipedia</a>
+        <a href="https://www.facebook.com/realmadrid">Facebook</a>
+        <a href="https://instagram.com/realmadrid">Instagram</a>
+        <a href="https://www.twitter.com/realmadriden">Twitter</a>
+        <a href="https://www.youtube.com/realmadrid">Youtube</a>
+        </a>
+    </div>
+
+    <!-- <script src="main.js"></script> -->
+    <div id="h1div"><h1>Newcastle United Store</h1></div><br>
+    
+    <div class="maindiv" style="background-color: white; margin: auto;">
+        <div class="cartdiv">
+            <table border="0.5" style="font-family: Times New Roman;"> 
+                <tr>
+                    <th>Product</th>
+                    <th class="tableheader"></th>
+                    <th class="tableheader">Quantity</th>
+                    <!--<select name="quantity" id="quantity" size="1" ></select> -->
+                    <th class="tableheader">Price</th>
+                </tr><br><br>
+                <tr>
+                    <td><img src="./images/BlueTshirt.jpg" style="height:80px; width: 80px;"></img></td>
+                    <td>Black T-Shirt</td>
+                    <td>
+                        <label for="quantity"></label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="5">
+                        <input type="submit">
+                    </td>
+                    <td>$30</td>
+                </tr>
+                <tr>
+                    <td><img src="./images/BlueTshirt.jpg" style="height:80px; width: 80px;"></img></td>
+                    <td>Red T-Shirt</td>
+                    <td>                        
+                        <label for="quantity"></label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="5">
+                        <input type="submit"></td>
+                    <td>$30</td>
+                </tr>
+                <tr>
+                    <td><img src="./images/BlueTshirt.jpg" style="height:80px; width: 80px;"></img></td>
+                    <td>Blue T-Shirt</td>
+                    <td>                      
+                        <label for="quantity"></label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="5">
+                        <input type="submit">
+                    </td>
+                    <td>$30</td>
+                </tr>
+            </table>
+
+<!--         <div class="products">
+            <br><br>
+            <ul style="list-style-type: none; margin: auto;">
+                <li><img src="./images/BlueTshirt.jpg" style="height:80px; width: 80px;"></img> Blue T-Shirt</li><br>
+                <li><img src="./images/BlueTshirt.jpg" style="height:80px; width: 80px;"></img> Black T-shirt</li><br>
+                <li><img src="./images/BlueTshirt.jpg" style="height:80px; width: 80px;"></img> Red T-shirt</li><br>
+            </ul>
+        </div> -->
+        </div><br><br><br>
+
+        <div class="coupondiv">
+            <br>
+            <label for="fullname" style="background-color: white;">Have Coupon?</label><br><br>
+            <input type="text" name="coupon" id="Submit" style="background-color: white;">
+            <br><br><input type="submit" value="Apply"><br><br>
+        </div><br><br><br>
+    </div>
+
+
+    <div class="pricediv">
+        <br>
+        <p>Total Price: $ </p><br>
+        <p>Discount: $ </p><br>
+        <p>$ </p><br>
+    </div>
+    <footer class="footer">Newcastle United F.C © 2021 All rights reserved.</footer>
+
+</body>
+</html>
