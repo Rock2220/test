@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<!-- https://www.youtube.com/watch?v=oXrlgOEiy6o -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/storev3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Newcastle United Store</title>
+</head>
+<body>
+    <div class="topnav" id="mytopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="storev3.html">Store</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        <a href="https://en.wikipedia.org/wiki/Newcastle_upon_Tyne">Wikipedia</a>
+        <a href="https://www.facebook.com/realmadrid">Facebook</a>
+        <a href="https://instagram.com/realmadrid">Instagram</a>
+        <a href="https://www.twitter.com/realmadriden">Twitter</a>
+        <a href="https://www.youtube.com/realmadrid">Youtube</a>
+        </a>
+    </div>
+
+    <!-- <script src="main.js"></script> -->
+    <div id="h1div"><h1>Newcastle United Store</h1></div><br>
+	
+	<div class="small-container cart-page">
+		<table id="list" class="productsList">
+			<tr>
+				<th>Product</th>
+				<th>Quantity</th>
+                <th></th>
+                <th></th>
+				<th>Subtotal</th>
+			</tr>
+
+			<tr>
+				<td>
+					<div class="cart-info">
+                        <!-- <img src="images/BlueTshirt.jpg"> -->
+                        
+                        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off;" >
+                        <div style="display: inline-block;">
+                            <label for="img"></label>
+                            <input type="file" id="img" name="img" accept="image/*"  style="margin-right: 5px; width: 15em;  height: 2em;";>
+                        </div>
+
+                        <div>
+                            <label style="display: inline-block;">Product name</label>
+                            <input type="text" name="productname" id="productname" style="width: 15em;  height: 2em;"><br><br>
+
+                            <label style="display: inline-block;"><small>Price</small></label>
+                            <input type="text" name="price" id="price" style="width: 5em;  height: 2em;"><br>
+						</div>
+					</div>
+				</td>
+
+                <td>
+                    <div>
+                        <input type="number" id="number" value="1">
+                    </div>
+                </td> 
+                
+                <td>
+                    <div>
+                        <a href="">Remove</a>
+                    </div>
+                </td>
+                
+                <td>
+                    
+                    <input type="submit" value="Submit" style="text-align:center; width: 5em;  height: 2em;";">
+                </td>
+                        </form>
+
+                <td> 
+                    <label>$</label>
+                    <input type="text" name="subtotal"><br><br></td>
+                </td>
+			</tr>
+
+		</table>
+	</div>
+		
+<!-- 	<div class="total-price">
+		<table>
+			<tr>
+				<td>Subtotal</td>
+				<td>$</td>
+			</tr>
+			<tr>
+				<td>Tax</td>
+				<td>$20.00</td>
+			</tr>
+			<tr>
+				<td>Total</td>
+				<td>$</td>
+			</tr> -->
+    
+		</table>
+	</div>
+
+    
+    <footer class="footer">Newcastle United F.C © 2021 All rights reserved.</footer>
+	<script src="storev3.js"></script>
+</body>
+</html>
