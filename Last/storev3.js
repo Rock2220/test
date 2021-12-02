@@ -15,11 +15,11 @@ function onFormSubmit(){
 }
 function readFormData(){
     var formData = {};
-    formData["imglocation"] = document.getElementById("imglocation").value;
+    formData["img"] = document.getElementById("img").value;
     formData["productname"] = document.getElementById("productname").value;
     formData["price"] = document.getElementById("price").value;
-    formData["quantity"] = document.getElementById("quantity").value;
-    return formData;
+/*     formData["quantity"] = document.getElementById("quantity").value;
+ */    return formData;
     
 }
 

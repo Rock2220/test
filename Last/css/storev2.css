@@ -71,7 +71,7 @@ th{
   font-weight: bolder;
 	padding: 5px;
 	color: #fff;
-	background: #ff523b;
+	background: rgb(176,176,176);
 	font-weight: normal;
 }
 
@@ -85,7 +85,7 @@ td input{
 }
 
 td a{
-	color: #ff523b;
+	color: rgb(211,211,211);
 	height: 30px;
 	padding: 5px;
 }
@@ -103,7 +103,8 @@ td img{
 }
 
 .total-price table{
-	border-top: 3px solid #ff523b;
+	border-top: 3px solid rgb(211,211,211)
+  ;
 	width: 100%;
 	max-width: 400px;
 }

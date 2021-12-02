@@ -37,7 +37,7 @@
 				<th>Quantity</th>
                 <th></th>
                 <th></th>
-				<th>Subtotal</th>
+				<th></th>
 			</tr>
 
 			<tr>
@@ -52,11 +52,11 @@
                         </div>
 
                         <div>
-                            <label style="display: inline-block;">Product name</label>
-                            <input type="text" name="productname" id="productname" style="width: 15em;  height: 2em;"><br><br>
+                            <label style="display: inline-block;"></label>
+                            <input type="text" name="productname" id="productname" placeholder="Product name" style="width: 15em;  height: 2em;"><br><br>
 
-                            <label style="display: inline-block;"><small>Price</small></label>
-                            <input type="text" name="price" id="price" style="width: 5em;  height: 2em;"><br>
+                            <label style="display: inline-block;"><small></small></label>
+                            <input type="text" name="price" id="price"  placeholder="Price" style="width: 5em;  height: 2em;"><br>
 						</div>
 					</div>
 				</td>
@@ -69,45 +69,88 @@
                 
                 <td>
                     <div>
-                        <a href="">Remove</a>
+                        <input type="reset" value="Reset" style="text-align:center; width: 5em;  height: 2em;">
                     </div>
                 </td>
                 
                 <td>
                     
-                    <input type="submit" value="Submit" style="text-align:center; width: 5em;  height: 2em;";">
+                        <input type="submit" value="Submit" style="text-align:center; width: 5em;  height: 2em;">
+                    
                 </td>
                         </form>
 
                 <td> 
-                    <label>$</label>
-                    <input type="text" name="subtotal"><br><br></td>
+                    <!-- <label>$</label> -->
+                    <!-- <input type="text" name="subtotal"><br><br></td> -->
                 </td>
 			</tr>
-
 		</table>
 	</div>
-		
-<!-- 	<div class="total-price">
+	<div class="small-container cart-page">
 		<table>
 			<tr>
-				<td>Subtotal</td>
-				<td>$</td>
+				<th>Product</th>
+				<th>Quantity</th>
+				<th>Subtotal</th>
 			</tr>
+		
 			<tr>
-				<td>Tax</td>
-				<td>$20.00</td>
+				<td>
+					<div class="cart-info">
+						<img src="images/BlueTshirt.jpg">
+						<div>
+							<p>Blue T-shirt</p>
+							<small>Price: $50.00 </small><br>
+							<a href="">Remove</a> 
+						</div>
+					</div>
+				</td>
+				<td><input type="number" value="1"></td>
+				<td>$50.00</td>
 			</tr>
+		
 			<tr>
-				<td>Total</td>
-				<td>$</td>
-			</tr> -->
-    
-		</table>
+				<td>
+					<div class="cart-info">
+						<img src="images/BlueTshirt.jpg">
+						<div>
+						<p>Red T-shirt</p>
+						<small>Price: $40.00 </small><br>
+						<a href="">Remove</a> 
+						</div>
+					</div>
+				</td>
+				<td><input type="number" value="1"></td>
+				<td>$40.00</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<div class="cart-info">
+						<img src="images/BlueTshirt.jpg">
+						<div>
+							<p>Black T-shirt</p>
+							<small>Price: $45.00 </small><br>
+							<a href="">Remove</a> 
+						</div>
+					</div>
+				</td>
+				<td><input type="number" value="1"></td>
+				<td>$45.00</td>
+			</tr>
+        </table>
 	</div>
 
-    
     <footer class="footer">Newcastle United F.C © 2021 All rights reserved.</footer>
-	<script src="storev3.js"></script>
+    <script>
+            function getData(){
+            var imageloca = document.getElementsByTagName("input")[0];
+            var productname = document.getElementById("productname");
+            var price = document.getElementById("price");
+            console.log(price.value);
+            }
+    </script>
+	<!-- <script src="storev3.js"></script> -->
 </body>
 </html>
