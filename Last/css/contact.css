@@ -1,4 +1,7 @@
-
+*{
+  margin: 0;
+  padding: 0;
+}
 body{
   text-align: center;
   background-color: #cec6c8;
@@ -49,7 +52,7 @@ form{
   box-shadow: 2px aqua;
   border: solid 2px rgb(238, 238, 209);
   border-radius: 10px;
-  font-family: "humanist_521regular",Helvetica,Arial,sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 form > label{

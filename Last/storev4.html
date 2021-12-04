@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-
-<!--How To Make Shopping Cart Page On eCommerce Website 
-	https://www.youtube.com/watch?v=oXrlgOEiy6o -->
-
-<!-- Complete CRUD Operations using JavaScript with CSS & Html
-	https://www.youtube.com/watch?v=MKD0Vsu0Ikw -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/storev3.css">
+    <link rel="stylesheet" href="css/storev4.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Newcastle United Store</title>
 </head>
 <body>
     <div class="topnav" id="mytopnav">
         <a href="index.html" class="active">Home</a>
-        <a href="storev3.html">Store</a>
+        <a href="storev4.html">Store</a>
         <a href="team.html">Team</a>
         <a href="contact.html">Contact</a>
         <a href="about.html">About</a>
@@ -28,7 +22,6 @@
         <a href="https://instagram.com/realmadrid">Instagram</a>
         <a href="https://www.twitter.com/realmadriden">Twitter</a>
         <a href="https://www.youtube.com/realmadrid">Youtube</a>
-        </a>
     </div>
 
     <!-- <script src="main.js"></script> -->
@@ -52,21 +45,21 @@
 						<form autocomplete="off" onsubmit="onFormSubmit()" >
 						<div style="display: inline-block;">
 							<label for="img"></label>
-							<input type="file" id="img" name="img" accept="image/*"  style="margin-right: 5px; width: 15em;  height: 2em;";>
+							<input type="file" class="input1" id="img" name="img" accept="image/*">
 						</div>
 
 						<div>
 							<label for="productname" style="display: inline-block;"></label>
-							<input type="text" name="productname" id="productname" placeholder="Product name" style="width: 15em;  height: 2em;"><br><br>
+							<input type="text" name="productname" id="productname" class="input1" placeholder="Product name"><br><br>
 
 							<label for="price" style="display: inline-block;"></label>
-							<input type="text" name="price" id="price" placeholder="Price" style="width: 5em;  height: 2em;"><br>
+							<input type="number" name="price" id="price" class="input1" placeholder="Price" min="3"><br>
 						</div>
 					</td>
 
 					<td>
 						<div>
-							<input type="qty" id="qty" for="qty" value="1">
+							<input type="number" id="qty" for="qty" value="5" min="1" max="500">
 						</div>
 					</td> 
 					
@@ -75,8 +68,8 @@
 					
 					<td>
 						<div>
-							<input type="submit" value="Submit" style="text-align:center; width: 5em;  height: 2em;">
-							<input type="reset" value="Reset" style="text-align:center; width: 5em;  height: 2em;">
+							<input type="submit" class="input2" value="Submit">
+							<input type="reset" class="input2" value="Reset">
 						</div>
 					</td>
 						</form>
@@ -90,44 +83,21 @@
 		<table id="StoreList" class="list">
 			<thead>
 				<tr>
-					<th></th>
 					<th>Product Name</th>
 					<th>Price</th>
 					<th>Quantity</th>
 					<th></th>
+					<th></th>
 				</tr>
 			</thead>
+			
 			<tbody>
 
 			</tbody>
-<!-- 			<tr>
-				<td>
-					<div class="cart-info">
-						<img src="images/BlueTshirt.jpg">
-						<div>
-							<p>Blue T-shirt</p>
-							<small>Price: $50.00 </small><br>
-						</div>
-					</div>
-				</td>
-				<td><input type="number" value="1"></td>
-				<td>$</td>
-				<td><a href="">Reset</a></td>
-			</tr> -->
         </table>
-	</div>
-<br><br><br>
+	</div><br><br><br>
 
     <footer class="footer">Newcastle United F.C © 2021 All rights reserved.</footer>
-<!--     <script>
-/*          function getData(){
-            var imageloca = document.getElementsByTagName("input")[0];
-            var productname = document.getElementById("productname");
-            var price = document.getElementById("price");
-            console.log(price.value);
-            } */
-
-    </script> -->
 	<script script type="text/javascript" src="./js/storev4.js"></script>
 </body>
 </html>

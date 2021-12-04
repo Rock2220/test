@@ -4,7 +4,10 @@
     align-items: center;
     background-color: rgb(243, 232, 232);
 } */
-
+*{
+  margin: 0;
+  padding: 0;
+}
 .footer{
     text-align: center;
 	
@@ -72,7 +75,7 @@ form > div{
 
 th{
 	text-align: left;
-  font-family: 'Times New Roman';
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bolder;
 	padding: 5px;
 	color: #fff;

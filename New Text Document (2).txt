@@ -1,0 +1,7 @@
+Device name	DESKTOP-Q2AV5P6
+Processor	Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz   3.60 GHz
+Installed RAM	8.00 GB (7.89 GB usable)
+Device ID	08CD45FF-360E-45F6-9DB4-C7891F1A8BCD
+Product ID	00331-10000-00001-AA033
+System type	64-bit operating system, x64-based processor
+Pen and touch	No pen or touch input is available for this display

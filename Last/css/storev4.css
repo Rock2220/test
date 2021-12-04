@@ -47,11 +47,24 @@
     display: none;
   }
   
+.input1{
+  margin-right: 5px;
+  width: 15em;  
+  height: 2em;
+  }
+
+.input2{
+  text-align:center; 
+  width: 5em;  
+  height: 2em;
+}
 
 #h1div {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 20px;
     display: block;
     text-align: center;
+    font-weight: 100;
 }
 
 .cart-page{
@@ -68,13 +81,18 @@ table{
 	display: flex;
 	flex-wrap: wrap;
 }
+
+form > div{
+  display: inline-block;
+}
+
 th{
 	text-align: left;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bolder;
 	padding: 5px;
 	color: #fff;
-	background: rgb(176,176,176);
+	background:rgb(211,211,211);
 	font-weight: normal;
 }
 
@@ -88,7 +106,7 @@ td input{
 }
 
 td a{
-	color: rgb(211,211,211);
+	color: #ff523b;
 	height: 30px;
 	padding: 5px;
 }
@@ -106,8 +124,7 @@ td img{
 }
 
 .total-price table{
-	border-top: 3px solid rgb(211,211,211)
-  ;
+	border-top: 3px solid rgb(211,211,211);
 	width: 100%;
 	max-width: 400px;
 }

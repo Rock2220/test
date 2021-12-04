@@ -7,3 +7,10 @@ https://flaviocopes.com/loosely-strongly-typed/
 
 HTML PROJECT
 https://www.youtube.com/watch?v=k4gzE80FKb0
+
+
+<!--How To Make Shopping Cart Page On eCommerce Website 
+	https://www.youtube.com/watch?v=oXrlgOEiy6o -->
+
+<!-- Complete CRUD Operations using JavaScript with CSS & Html
+	https://www.youtube.com/watch?v=MKD0Vsu0Ikw -->

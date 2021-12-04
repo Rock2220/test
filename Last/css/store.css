@@ -4,7 +4,10 @@
     align-items: center;
     background-color: rgb(243, 232, 232);
 } */
-
+*{
+  margin: 0;
+  padding: 0;
+}
 .footer{
     text-align: center;
   }

@@ -3,7 +3,10 @@
   margin: auto;
   object-fit: fill;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+}
 
 h1{
   text-align: center;
@@ -53,7 +56,7 @@ h1{
 }
 
 .bio{
-  font-family: "humanist_521bold",Helvetica,Arial,sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: justify;
 }
 .main-div > div{
