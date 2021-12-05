@@ -14,3 +14,7 @@ https://www.youtube.com/watch?v=k4gzE80FKb0
 
 <!-- Complete CRUD Operations using JavaScript with CSS & Html
 	https://www.youtube.com/watch?v=MKD0Vsu0Ikw -->
+
+
+VI For CSS
+https://css-tricks.com/almanac/properties/f/font/
