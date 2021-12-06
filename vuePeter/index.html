@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <p>{{ welcomeWord }}</p> -->
+
+        <!-- Accessing Javascript objects -->
+        <!-- <p>{{ car.name }}</p> -->
+
+        <!-- Logical Operations -->
+        <!-- <p>Is it true: {{isThisTrue ? "Yes!": 'No!'}}</p> -->
+
+        <!-- <p>{{ car.myarray[0] }}</p> 
+
+        <p>{{ func() }}</p> 
+        
+        <p>{{ someText() }}</p>  -->
+
+        <!-- Custom Directive vs Built-in Directive -->
+
+        <p style="text-align: center;" v-text="welcomeWord"></p><hr><hr>
+        <img v-bind:src="source" v-bind:alt="alt">
+        <hr><hr>
+        <div style="text-align: center;" v-html="htmlCode"></div>
+
+    <!-- If-Else statement in Vue -->
+    <!-- 
+        <p v-if="name1 === 'Ramos'">Your name is: {{name1}}</p>
+        <p v-else-if="name2"> Your name is: {{name2}} </p>
+        <p v-else>Your name is: {{name3}}</p>
+    -->
+
+    <!-- Another approach -->
+    <p style="text-align: center; font-weight:bold;" v-show="name2 === 'Isco'"><i>Welcome {{name2}}</i></p>
+    <p v-show="name2 !== 'Isco'">You are not allowed!</p><hr><hr>
+
+    <i style="text-align: center; font-weight:bold;"><p v-for="(club, index) in car.myarray">{{index}}. {{club}}</p></i>
+
+    </div>
+    
+</body>
+
+<script>  
+    new Vue
+    ({
+        // Informing Vuejs where am I gonna be working
+        el:"#app",
+
+        data: 
+        {
+        welcomeWord: "Welcome to my first Vuejs Project!",
+        car: 
+        {
+            name: "Aston Martin",
+            yearManufactured: 1990,
+            myarray: ["A.C. Milan", "Tottenham F.C.", "Real MAdrid C.F.", "Barcelona F.C."]
+        },
+
+        href: "https://www.google.com",
+        source: "../Last/images/bernabeu2.jpg",
+        alt: "This is an image",
+        htmlCode: "<i>Welcome to my world!</i>",
+        isThisTrue: false,
+
+        name1: "Ramos",
+        name2: "Isco",
+        name3: "Casillas"
+    },
+
+        func:()=>{
+            return 'lorem ipsum datum'
+        },
+
+        methods:
+        {
+            someText()
+            {return this.car.name}
+        }
+    })
+</script>
+</html>
+
+

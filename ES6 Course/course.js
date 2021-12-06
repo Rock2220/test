@@ -111,39 +111,61 @@ console.log(`My favorite car is: ${car} and was manufactured in ${country === "I
 
 // Spread Operator
 
-const arr1 = ['x', 'y', 'z'];
-const arr2 = ['a', 'b', 'c'];
+// const arr1 = ['x', 'y', 'z'];
+// const arr2 = ['a', 'b', 'c'];
 
-let arrX = [1, 2, 3];
-const arrY = [4, 5, 6];
+// let arrX = [1, 2, 3];
+// const arrY = [4, 5, 6];
 
-console.log(arr1.concat(arr2));
+// console.log(arr1.concat(arr2));
 
-arr3 = [...arr1, ...arr2];
-console.log(arr3);
+// arr3 = [...arr1, ...arr2];
+// console.log(arr3);
 
-let combinedArray = [...arr1, ...arrX, ...arrY];
+// let combinedArray = [...arr1, ...arrX, ...arrY];
 
-// console.log(sum(arrX));             // Won't work this way
+// // console.log(sum(arrX));             // Won't work this way
 
-console.log(arrX);                   // [ 1, 2, 3 ]
-console.log(...arrX);               // 1 2 3 
-console.log(...combinedArray);     // x y z 1 2 3 4 5 6
-
-
-
-let arrZero = [1, 2, 3];
-let arrOne = arrZero;
-
-arrOne.push(4444);
-console.log(arrZero);                  // BUG, use the spread operator
-console.log(arrOne);      
-
-console.log(Math.max(arrZero));       //NaN
-console.log(Math.max(...arrZero));    //4444
+// console.log(arrX);                   // [ 1, 2, 3 ]
+// console.log(...arrX);               // 1 2 3 
+// console.log(...combinedArray);     // x y z 1 2 3 4 5 6
 
 
-// Default 
 
+// let arrZero = [1, 2, 3];
+// let arrOne = arrZero;
 
-// Rest 
+// arrOne.push(4444);
+// console.log(arrZero);                  // BUG, use the spread operator
+// console.log(arrOne);      
+
+// console.log(Math.max(arrZero));       //NaN
+// console.log(Math.max(...arrZero));    //4444
+
+///////////////////////////////////////////////////////
+
+// Default Parameter
+
+function showInfo(uname, job, shirtcolor){
+
+    uname = uname === undefined? "Admin" : uname;
+
+    // Another way using truthy-falsy pattern
+    uname = uname || "Admin";
+
+    job = job === undefined ? "Football Player" : job;
+
+    shirtcolor = shirtcolor === undefined ? "Red" : shirtcolor;
+
+    return `Hello ${uname}, Your job is: ${job}, Shirt color is: ${shirtcolor}`;
+}
+
+// Rest Operator
+console.log(showInfo()); // Hello undefined, Your job is: undefined, Shirt color is: undefined
+
+console.log(showInfo("Ramos")); // Hello Ramos, Your job is: undefined, Shirt color is: undefined
+
+console.log(showInfo("Isco", "Football Player")); // Hello Isco, Your job is: Football Player, Shirt color is: undefined
+
+console.log(showInfo("Isco", "Football Player", "Yellow")); // Hello Isco, Your job is: Football Player, Shirt color is: Yellow
+
