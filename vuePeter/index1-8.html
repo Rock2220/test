@@ -13,12 +13,12 @@
         <!-- <p>{{ welcomeWord }}</p> -->
 
         <!-- Accessing Javascript objects -->
-        <!-- <p>{{ car.name }}</p> -->
+        <!-- <p>{{ clubs.name }}</p> -->
 
         <!-- Logical Operations -->
         <!-- <p>Is it true: {{isThisTrue ? "Yes!": 'No!'}}</p> -->
 
-        <!-- <p>{{ car.myarray[0] }}</p> 
+        <!-- <p>{{ clubs.myarray[0] }}</p> 
 
         <p>{{ func() }}</p> 
         
@@ -39,13 +39,18 @@
     -->
 
     <!-- Another approach -->
-    <p style="text-align: center; font-weight:bold;" v-show="name2 === 'Isco'"><i>Welcome {{name2}}</i></p>
+    <!-- <p style="text-align: center; font-weight:bold;" v-show="name2 === 'Isco'"><i>Welcome {{name2}}</i></p>
     <p v-show="name2 !== 'Isco'">You are not allowed!</p><hr><hr>
 
-    <i style="text-align: center; font-weight:bold;"><p v-for="(club, index) in car.myarray">{{index}}. {{club}}</p></i>
+    <i style="text-align: center; font-weight:bold;"><p v-for="(club, index) in clubs.myarray">{{index}}. {{club}}</p></i> -->
 
-    </div>
-    
+    <!-- For Loop -->
+    <!--
+    <p style="text-align: center;" v-for="(club, index) in clubs.myarray"><b>{{index}} .</b> {{ club }}</>
+    -->
+    </div> 
+
+
 </body>
 
 <script>  
@@ -57,7 +62,7 @@
         data: 
         {
         welcomeWord: "Welcome to my first Vuejs Project!",
-        car: 
+        clubs: 
         {
             name: "Aston Martin",
             yearManufactured: 1990,
@@ -67,7 +72,7 @@
         href: "https://www.google.com",
         source: "../Last/images/bernabeu2.jpg",
         alt: "This is an image",
-        htmlCode: "<i>Welcome to my world!</i>",
+        htmlCode: "<i>Welcome to Real Madrid's website!</i>",
         isThisTrue: false,
 
         name1: "Ramos",
@@ -82,7 +87,7 @@
         methods:
         {
             someText()
-            {return this.car.name}
+            {return this.clubs.name}
         }
     })
 </script>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../vuePeter/js/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- <p v-for="(name,index) in names">
+            {{ index }} / {{ name }}
+        </p> -->
+
+        <!-- <ul>
+            <li v-for="(car,index) in cars">
+            {{ index }} / {{ car.brand }} / {{ car.color }} 
+            </li>
+        </ul> -->
+
+        <!-- <ul>
+            <li v-for="(value, key, index) in user">
+            <b>{{ index }} . </b> {{ key }} : {{ value }}
+            </li>
+        </ul> -->
+
+        <!-- <p> {{ myName }} </p>
+        <p v-once> {{ myName }} {{ update() }} </p> -->
+
+        <div class="box" v-on:mousemove="getCoordinates"> <p style="display: none;">{{ getCoordinates }}</p> </div>
+
+        <p>X : {{ X }} </p>
+        <p>Y : {{ Y }} </p>
+
+        <hr><hr><hr>
+
+        <!-- Change name when 
+            Single Click ==   v-on:click
+            Double click ==   v-on:dblclick
+            Use Modifiers to choose between right or left click
+            
+            Right click  == v-on:click.right
+            Left Click   == v-on:click.left
+                -->
+        <!-- <h2> {{ myName }} </h2>
+        <div v-on:dblclick="changeText('Ramos', $event)">
+            Click here to change the name!</div>
+        </div>
+        <hr><hr><hr> -->
+
+        <!-- Catching form submission without reloading the page-->
+        <form v-on:submit.prevent="handleForm">
+            <input/>
+            <button type="submit">Submit</button>            
+        </form>
+
+        <hr><hr><hr>
+
+        <!-- Keyboard Events -->
+        <input type="text" v-on:keyup="keyboardEvents"><br><br>
+
+        <input type="text" v-on:keyup.space.41="keyboardEvents"><br><br>
+
+        <input type="text" v-on:keyup.space.enter.41="keyboardEvents"><br><br>
+
+        <input type="text" v-on:keyup.r="keyboardEvents">
+
+        <hr><hr><hr>
+
+        <form v-on:submit.prevent="formHandler">
+            <label>First Name: </label>
+            <input type="text" v-model="emptyForm.firstname"><br><br>
+
+            <label>Last Name: </label>
+            <input type="text" v-model="emptyForm.lastname"><br><br>
+
+            <label>Age: </label>
+            <!-- Using the modifier   .number -->
+            <!-- Using the modifier   .lazy  will update values after the user goes to another box -->
+            <input type="text" v-model.number="emptyForm.Age"><br><br>
+
+            <!-- Trim spaces using the modifier   .trim -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+<script>
+
+    new Vue({
+        el:"#app",
+        data:{
+            X: 0,
+            Y: 0,
+            myName: "Francis",
+            user:{
+                name:'Isco',
+                lastname:'Jones',
+                age:25
+            },
+            names:['Francis','Jane','Steve'],
+            cars:[
+                {
+                    brand:'Bugatti Veyron',
+                    yearManufactured: 1990,
+                    color:'Red'
+                },
+                {
+                    brand:'Porsche',
+                    yearManufactured: 1995,
+                    color:'Blue'
+                },
+                {
+                    brand:'Aston Martin',
+                    yearManufactured: 2001,
+                    color:'Green'
+                }
+            ],
+
+            emptyForm: {
+                Age: "",
+                firstname: "",
+                lastname: ""
+            }
+        },
+
+        methods:
+        {
+            update(){
+                setTimeout(()=>{
+                    this.name = 'Ramos';
+                },20)
+            },
+            getCoordinates(event){
+                this.X = event.clientX;
+                this.Y = event.clientY;
+            },
+
+            changeText(newName, event){
+                this.myName = "New Name";
+                console.log(event)
+            },
+
+            handleForm(event){
+                event.preventDefault();
+                console.log("Event Cancelled!");
+            },
+            
+            keyboardEvents(event){
+                console.log(event.target.value)
+            },
+
+            // Using the V-Model
+            formHandler(){
+                console.log(this.emptyForm)
+            }
+        }
+    })
+
+</script>
+
+
+<style>
+    .box{
+        background-color: aqua;
+        height: 300px;
+        width: 300px;
+        align-items: center;
+    }
+</style>
+
+</html>
+
+
