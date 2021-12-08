@@ -11,6 +11,13 @@
 <body>
 
     <div id="app">
+        <p> {{ myfunc() }}</p><hr><hr>
+        <p> {{ plane.name }} </p><hr><hr>
+        <img v-bind:src="src" v-bind:alt="alt"><hr><hr>
+
+        <a v-bind:href="website">Google's website</a><hr><hr>
+
+        <div v-html="myhtml"></div>
         <!-- <p v-for="(name,index) in names">
             {{ index }} / {{ name }}
         </p> -->
@@ -85,6 +92,7 @@
             <!-- Trim spaces using the modifier   .trim -->
             <button type="submit">Submit</button>
         </form>
+        
     </div>
 
 </body>
@@ -96,12 +104,25 @@
             X: 0,
             Y: 0,
             myName: "Francis",
+            src: "../Screenshots/Object.freeze.png",
+            alt: "Alt text",
+            website: "https://www.google.co.uk",
+            myhtml: "<i>Hala Madrid</i>",
             user:{
                 name:'Isco',
                 lastname:'Jones',
                 age:25
             },
-            names:['Francis','Jane','Steve'],
+            myfunc:() =>{
+                return "My First function!";
+            },
+
+            plane:{
+                name: "Boeing 777",
+                ManufYr: 1980
+            },
+
+            names:['Ramos', 'Isco', 'Steve'],
             cars:[
                 {
                     brand:'Bugatti Veyron',
