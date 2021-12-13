@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vuePeter/js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app1">
+        <name></name>
+    </div>
+
+</body>
+<!-- Each component executes its own function  -->
+<script>
+    Vue.component('name', {
+        data(){  
+            return {
+                name: 'Gallagher',
+                count: 0
+            }
+        },
+
+        // Content of the component
+        template: `<p @click="count++" style="font-family: Verdana"> You clicked here [ {{ count }}  ] times </p>`
+    })
+
+
+    const vm = new Vue({
+        el:"#app1",
+        clubs: ["RMA", "ACM", "TOT"],
+        methods: {
+            emptyFunction: function (){
+                return this.name
+            }
+        },
+    })
+    
+
+</script>
+
+</html>

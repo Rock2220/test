@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vuePeter/js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app1" style="font-size: 25px;">
+        This is Instance number: {{ message1 }}
+
+    </div>
+
+    <hr>
+    <hr>
+
+    <div id="app2" style="font-size: 25px;">
+        Welcome to Instance number: {{ message2 }}
+
+        <hr>
+        <hr>
+        <!-- Reference: is a pointer to a particular element that gives you access to any operation -->
+        <div red="myFirstRef">Some Text to be displayed!</div>
+
+        {{alertText()}}
+    </div>
+
+</body>
+<script>
+
+let text = "Some text";
+
+const data = {
+    value: "Someone loves coding!",
+    message1: 1
+}
+
+
+    const instance1 = new Vue({
+        el:"#app1",
+        data: data
+    })
+    
+    const instance2 = new Vue({
+        el:"#app2",
+        data:{
+            message2: "2"
+        },
+        methods: {
+          alertText(){
+              alert(text);
+          },
+          displayText(){
+              console.log(this.myFirstRef)
+          }
+        }
+    })
+
+</script>
+
+<!-- <style>
+  
+  .element {
+      color:white;
+      background: black;
+      padding:10px;
+  }
+
+  .red {
+      background: red;
+  }
+
+  .blue {
+      background: blue;
+  }
+
+  .green {
+      background: green;
+  }
+
+</style> -->
+
+</html>
