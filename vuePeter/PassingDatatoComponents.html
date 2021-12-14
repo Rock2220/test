@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vuePeter/js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app1">    
+    <!-- <form class="" action="../vuePeter/Lesson20.html" method="post">
+        <input type="text" name="" :value="test" placeholder=" Using V-Bind">
+        <input type="text" name="" v-model:value="test" placeholder="Using V-Model">
+    </form> -->
+    <component2 v-for="book in books" :isbn="book.isbn" :title="book.title" :author="book.author"></component2>
+
+    <component_1></component_1>
+
+    <component_2></component_2>
+</div>
+
+</body>
+
+
+<!-- Computed vs Method 
+Method responds to some action (Like on facebook that counts on each click)
+Computed hosts small computations, caches/computes properties, doesn't depend on some action, doesn't include parameters -->
+
+
+
+
+<!-- Each component executes its own function  -->
+<script>
+    Vue.component("component2", {
+        data(){
+            return {
+                count: 0
+            }
+        },
+        // Passing Data from the Vue instance in the next line using: props
+        props: ['name', 'isbn', 'title', 'author'],
+        template: `<p> ISBN: {{ isbn }}  <br> Book: {{ title }} <br> Author: {{ author }} <br><br></p>`
+    })
+
+var component22 = {
+    data: function(){
+        c0: 0
+    },
+    template: `<p>Paragraph 1</p>`
+}
+
+var component33 = {
+    data: function(){
+        c1 :0
+    },
+    template: `<p>Paragraph 2</p>`
+}
+
+    var vm = new Vue({
+        el:"#app1",
+        data: {
+        name: "Sergio",
+        clubs: ["RMA", "ACM", "TOT"],
+        books: [
+            {isbn: 1, title: "Introduction to Algorithms 3rd Edition", author: "Network Chuck"},
+            {isbn: 2, title: "Network Automation and Programmability Fundamentals", author: "David Bombal"},
+            {isbn: 3, title: "Python 3 for Network Engineers", author: "Jason Gooley"},
+        ]
+        },
+
+        methods: {
+            emptyFunction: function (){
+                return this.name
+            }
+        },
+
+        components:{
+            component_1: component22,
+            component_2: component33
+        }
+    })
+
+
+
+</script>
+</html>

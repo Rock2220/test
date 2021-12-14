@@ -8,38 +8,50 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="app1">    
+    <!-- <form class="" action="../vuePeter/Lesson20.html" method="post">
+        <input type="text" name="" :value="test" placeholder=" Using V-Bind">
+        <input type="text" name="" v-model:value="test" placeholder="Using V-Model">
+    </form> -->
+    <component2></component2>
 
-    <div id="app1">
-        <name></name>
-    </div>
+</div>
 
 </body>
+
 <!-- Each component executes its own function  -->
+
 <script>
-    Vue.component('name', {
-        data(){  
+    Vue.component("component2", {
+        data(){
             return {
-                name: 'Gallagher',
+                Something: "Some Text to be displayed",
                 count: 0
             }
         },
-
-        // Content of the component
-        template: `<p @click="count++" style="font-family: Verdana"> You clicked here [ {{ count }}  ] times </p>`
+        // Passing Data from the Vue instance in the next line using: props
+        props: ['name', 'id', 'text', 'author'],
+        template: `<p @dblclick="count++"> Some text to be displayed and  counted when double clicked. <br> <br> Count: {{ count }} </p>`
     })
 
 
     const vm = new Vue({
         el:"#app1",
+        data: {
+        name: "Sergio",
         clubs: ["RMA", "ACM", "TOT"],
+        posts: [
+            {id: 1, text: "Some Text 1", author: "Sr4"},
+            {id: 2, text: "Some Text 2", author: "CR5"},
+            {id: 3, text: "Some Text 3", author: "RMA"},
+            {id: 4, text: "Some Text 4", author: "IC1"}
+        ]
+    },
         methods: {
             emptyFunction: function (){
                 return this.name
             }
         },
     })
-    
-
 </script>
-
 </html>
