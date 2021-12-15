@@ -9,26 +9,34 @@
 </head>
 <body>
     <div id="app1">    
-    <!-- <form class="" action="../vuePeter/Lesson20.html" method="post">
+    <!-- 
+        <form class="" action="../vuePeter/Lesson20.html" method="post">
         <input type="text" name="" :value="test" placeholder=" Using V-Bind">
         <input type="text" name="" v-model:value="test" placeholder="Using V-Model">
-    </form> -->
+    </form> 
+    -->
     <component2 v-for="book in books" :isbn="book.isbn" :title="book.title" :author="book.author"></component2>
 
     <component_1></component_1>
 
-    <component_2></component_2>
-</div>
+    <component_2></component_2>    <hr>
 
+    <!-- Calculate Age -->
+    <h4>Your age is: {{ calcAge }}</h4>    <hr>
+
+    <!-- Filtering Function -->
+    <label> Search for Programming Languages:</label>
+    <input type="text" v-model="findLanguage">
+    <ul>
+        <li v-for="lang in filterLangs">{{ lang }}</li>
+    </ul>
+</div>
 </body>
 
 
 <!-- Computed vs Method 
 Method responds to some action (Like on facebook that counts on each click)
 Computed hosts small computations, caches/computes properties, doesn't depend on some action, doesn't include parameters -->
-
-
-
 
 <!-- Each component executes its own function  -->
 <script>
@@ -61,7 +69,21 @@ var component33 = {
         el:"#app1",
         data: {
         name: "Sergio",
+        age: 22,
         clubs: ["RMA", "ACM", "TOT"],
+        findLanguage: '',
+        languages: [
+            'HTML',
+            'CSS',
+            'Sass',
+            'Javascript',
+            'PHP',
+            'MySQL',
+            'Python',
+            'Java',
+            'C++',
+            'C#'
+        ],
         books: [
             {isbn: 1, title: "Introduction to Algorithms 3rd Edition", author: "Network Chuck"},
             {isbn: 2, title: "Network Automation and Programmability Fundamentals", author: "David Bombal"},
@@ -78,10 +100,21 @@ var component33 = {
         components:{
             component_1: component22,
             component_2: component33
+        },
+
+        computed: {
+        calcAge: function(){
+            console.log("Run");
+            return this.age *2;
+        },
+
+        filterLangs: function(){
+            var filtering = new RegExp(this.findLanguage, 'i');
+            return this.languages.filter(function (el){
+                return el.match(filtering);
+            })
         }
+    }
     })
-
-
-
 </script>
 </html>

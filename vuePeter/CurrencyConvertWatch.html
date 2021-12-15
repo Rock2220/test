@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app1">    
+
+        <h3><b> Currency converter </b></h3>
+        <label>USD</label>
+        <input type="text" v-model="usd">
+        <label>EGP</label>
+        <input type="text" v-model="egp">
+
+    </div>
+</body>
+
+<script src="../vuePeter/js/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:"#app1",
+        data: {
+            egp: 0,
+            usd: 0
+        },
+
+        methods: {
+        },
+
+        components:{
+        },
+
+        computed: {
+        },
+        watch:{
+            egp: function(value){
+                this.usd = value / 15;
+                console.log('EGP RUN');
+            },
+            usd: function(value){
+                this.egp = value * 15;
+                console.log('USD RUN');
+            },
+        }
+    })
+</script>
+</html>
